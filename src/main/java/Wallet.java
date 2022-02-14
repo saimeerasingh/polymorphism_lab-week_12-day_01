@@ -4,6 +4,7 @@ public class Wallet {
     private String name;
     private ArrayList<IScan> cards;
 
+
     public Wallet(String name) {
         this.name = name;
         this.cards = new ArrayList<IScan>();
