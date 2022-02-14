@@ -17,7 +17,6 @@ public class Wallet {
         return this.cards.size();
     }
 
-
     public void addItem(IScan card) {
         this.cards.add(card);
     }
