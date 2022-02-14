@@ -9,6 +9,7 @@ public class WalletTest {
     private DebitCard debitCard;
     private LoyaltyCard loyaltyCard;
     private Ticket ticket;
+    private Cash cash;
 
     @Before()
     public void before(){
@@ -17,6 +18,8 @@ public class WalletTest {
         debitCard = new DebitCard("1111222233334444","12/23", 234,909090,12345678);
         loyaltyCard = new LoyaltyCard("123456787890", "Harrid's Stores");
         ticket = new Ticket("AB12345", "QWERTY123456", "26/01/2020");
+        cash = new Cash(CashDenomination.FIFTY);
+
     }
 
     @Test
@@ -59,6 +62,7 @@ public class WalletTest {
         wallet.addItem(debitCard);
         wallet.addItem(loyaltyCard);
         wallet.addItem(ticket);
-        assertEquals(4, wallet.getNumberOfItems());
+        wallet.addItem(cash);
+        assertEquals(5, wallet.getNumberOfItems());
     }
 }
